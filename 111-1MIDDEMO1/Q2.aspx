@@ -11,8 +11,8 @@
     <form id="form1" runat="server">
         <div>
             <h1>保單電訪單</h1>
-            <asp:Label ID="Label1" runat="server" Text="保單編號:"></asp:Label>
-            <asp:TextBox ID="tb_Num" runat="server"></asp:TextBox><br/>
+            保單編號:
+            <asp:TextBox ID="tb_Num" runat="server" AutoPostBack="True"></asp:TextBox><br/>
             聯絡方式：
             <asp:RadioButtonList ID="rbl_Phone" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                 <asp:ListItem Text="手機" Selected="True"></asp:ListItem>
@@ -22,7 +22,7 @@
             <br />
             <br />
             縣市與區域：
-            <asp:DropDownList ID="dpl_City" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="dpl_City" runat="server" OnSelectedIndexChanged="dpl_City_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
             <asp:DropDownList ID="dpl_Area" runat="server"></asp:DropDownList><br/>
             <asp:Button ID="btn_Submit" runat="server" Text="送出" Width="80px" />
 
